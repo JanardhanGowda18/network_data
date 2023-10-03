@@ -8,7 +8,7 @@ void main() {
 }
 Future<Album> fetchAlbum() async {
   final response = await http
-      .get(Uri.parse('https://jsonplaceholder.typicode.com/albums/2'));
+      .get(Uri.parse('https://jsonplaceholder.typicode.com/albums/1'));
 
   if (response.statusCode == 200) {
     return Album.fromJson(jsonDecode(response.body));
